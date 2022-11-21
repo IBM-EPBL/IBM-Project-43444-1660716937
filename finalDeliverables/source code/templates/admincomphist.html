@@ -1,0 +1,53 @@
+{% extends '_admindashboard.html' %}
+{% block body %}
+    <div class="history">
+            <span class="tab"  style="position: relative;
+            top: -250px;
+            left: -400px;
+            padding: 10px; width: 940px;
+            font-weight: bold;">{{a}}</span>
+            {% for row in complaints: %}
+            <div class="tab" style="position: relative;
+            border: 1px solid black;
+            top: -250px;
+            left: -400px;
+            padding: 10px; width: 940px;">
+            
+                <span style="margin-left: 10px;
+	            text-align: left;">{{ row.0 }}</span>
+                <span style="margin-left: 10px;
+	            text-align: left;">{{ row.1 }}</span>
+                <span style="margin-left: 20px;
+                text-align: left;">{{ row.2 }}</span>
+                <span style="margin-left: 20px;
+                text-align: left;">{{ row.3 }}</span>
+                <span style="margin-left: 20px;
+                text-align: left;">{{ row.4 }}</span>
+                <span style="margin-left: 30px;
+                text-align: left;">{{ row.5 }}</span>
+                <span style="margin-left: 20px;
+                text-align: left;">{{ row.7 }}</span>
+                <a href="/solved/{{ row.0 }} "><span style="margin-left: 20px;
+                text-align: left;">{{ row.8 }}</span></a>
+            </div>
+            {% endfor %}
+    </div>
+{% endblock %}
+
+<!--<table>
+           <thead>
+                <th> ComplaintNumber</th>
+                <th> Category</th>
+                <th> Subcategory</th>
+                <th> Complaintyype</th>
+                <th> State</th>
+                <th> RegisteredDate</th>
+                <th> Status</th>
+           </thead>
+           anthakanna m chylem ga iga 
+           mail etlaaag
+
+           <tbody>
+               division chylema line tho mari m ardam kakunnda untad ani
+            </tbody>
+        </table>-->

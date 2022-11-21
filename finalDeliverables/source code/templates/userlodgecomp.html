@@ -1,0 +1,52 @@
+{% extends '_userdashboard.html' %}
+{% block body %}
+<div class="container">
+    <div class="title">Lodge Complaint</div>
+   <form action="/complaint" method="POST">
+        <span class="text"style="color: green;font-weight:bold;">{{a}}</span>
+        <div class="user-details">
+                <div class="input-box" >
+                    <label for="select-category"  >Select Category</label>
+                    <select name="selectcategory" required>
+                        <option  value="category"></option>
+                        <option  value="E-commerse">E-commerse</option>
+                        <option  value="general">General</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                <label for="select-subcategory" >Select-sub Category</label>
+                <select name="selectsubcategory" required>
+                    <option  value="select-sub category"></option>
+                    <option  value="Online-shopping">Online Shopping</option>
+                    <option  value="E-wallet">E-wallet</option>
+
+                </select>
+                </div>
+                <div class="input-box">
+                  <label for="complaint-type" >Complaint-Type</label>
+                    <select name="type" required>
+                        <option  value="complaint-type"></option>
+                        <option  value="general">General</option>
+                        <option  value="Query">Query</option>
+                     </select>
+                </div>
+                <div class="input-box">
+                    <label for="State">State</label>
+                      <select name="state" required>
+                          <option  value="Telengana">Telengana</option>
+                          <option  value="Andhra-Pradesh">Andhra Pradesh</option>
+                          <option  value="others">Others</option>
+                      </select>
+                  </div>
+        </div>
+                <div class="input-box">
+                    <label for="complaint" id="complaint">Complaint Details</label>
+                    <textarea  rows="15" cols="60" placeholder="Enter the complaint details with date" name="complaint" required></textarea>
+                </div>
+                <div class="button">  
+                    <input type="date" name="date">                                   
+                <input  type="submit" value="Register">
+                </div>
+    </form>
+</div>
+{% endblock %}

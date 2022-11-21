@@ -1,0 +1,31 @@
+{% extends '_userdashboard.html' %}
+{% block body %}
+    <div class="history" style="position: relative;
+    top: 10px;
+    left: 280px;">
+       <table>
+           <thead>
+                <th> ComplaintNumber</th>
+                <th> Category</th>
+                <th> Subcategory</th>
+                <th> Complaintyype</th>
+                <th> State</th>
+                <th> RegisteredDate</th>
+                <th> Status</th>
+           </thead>
+           <tbody>
+               {% for row in complaints: %}
+                <tr>
+                    <td>{{ row.0 }}</td>
+                    <td>{{ row.2 }}</td>
+                    <td>{{ row.3 }}</td>
+                    <td>{{ row.4 }}</td>
+                    <td>{{ row.5 }}</td>
+                    <td>{{ row.7 }}</td>
+                    <td>{{ row.8 }}</td>
+               </tr>
+               {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../static/userd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+    <body>
+        <input type="checkbox" id="check">
+        <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+        <div class="top"></div>
+        </label>
+        <div class="sidebar">
+            <header>Dashboard</header>
+            <ul>>
+                <li><a href="/home"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+                <li><a href="/profile"><i class="fas fa-link"></i>Profile</a></li>
+                <li><a href="/addcomplaint"><i class="fas fa-stream"></i>Lodge complaint</a></li>
+                <li><a href="/comphistory"><i class="fas fa-calendar-week"></i>Complaint history</a></li>
+                <li><a href="/logout "><i></i>Logout</a></li>
+            </ul>
+        </div>
+        <section>
+            {% block body %}
+            
+            {% endblock %}
+       </section>
+    </body>
+</html>
